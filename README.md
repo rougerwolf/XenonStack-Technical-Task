@@ -23,7 +23,8 @@ Step by Step Explanation of website:
 
 
 4: Blank details of the new users will be shown, so that user can add their data according to their need and user can also upload the data in file format.
-![image](https://user-images.githubusercontent.com/91240645/196816471-f1bf38e8-9335-4185-aaee-9347846c0dc3.png)
+![image](https://user-images.githubusercontent.com/91240645/196817432-f07cefb7-08d9-46a5-b1d9-3209b1fae593.png)
+
 
 
 

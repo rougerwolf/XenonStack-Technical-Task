@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Document</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="w3-bar w3-black">
+            <a href="#" class="w3-bar-item w3-button w3-auto w3-mobile">TechnicalTask</a>
+            <ul id="nav-mobile w3-mobile" class="right">
+                <li id="loginli"><a class="modal-trigger" href="#modal2">Login</a></li>
+                <li id="signupli"><a class="modal-trigger" href="#modal1">Signup</a></li>
+                <li id="logoutli"><a onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--Signup Modal -->
+    <div id="modal1" class="modal w3-container w3-mobile">
+        <div class="w3-container w3-mobile">
+            <h4>Signup</h4>
+            <form autocomplete="off" onsubmit="signup(event)">
+                <input type="email" id="signupEmail" placeholder="email" />
+                <input type="password" id="signupPassword" placeholder="password" />
+                <button class="btn w3-button" type="submit">submit</button>
+            </form>
+           
+
+
+        </div>
+    </div>
+
+    <!--login Modal -->
+    <div id="modal2" class="modal w3-mobile">
+        <div class="modal-content w3-mobile">
+            <h4>Login</h4>
+            <form autocomplete="off" onsubmit="login(event)">
+                <input type="email" id="loginEmail" placeholder="email" />
+                <input type="password" id="loginPassword" placeholder="password" />
+                <button class="btn w3-button" type="submit">submit</button>
+            </form>
+            
+
+
+        </div>
+    </div>
+    <!--edit profile -->
+    <div id="modal3" class="modal w3-container">
+        <div class="modal-content w3-container">
+            <h4>Edit your details</h4>
+            <div class="file-field input-field">
+                <div class="btn #fbc02d yellow darken-2">
+                    <span>File</span>
+                    <input type="file" accept="image/*" onchange="uploadImage(event)" />
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+            <form autocomplete="off" id="editProfile" onsubmit="updateUserProfile(event)">
+                <input type="email" name="profileEmail" placeholder="email" />
+                <input type="text" name="name" placeholder="name" />
+                <input type="text" name="phoneno" placeholder="contact number" />
+                <input type="text" name="specialty" placeholder="skills set" />
+                <input type="text" name="prorfolioUrl" placeholder=" url of portfolio" />
+                <input type="text" name="experience" placeholder=" experience years" />
+
+                <button class="w3-button" type="submit">submit</button>
+            </form>
+
+
+
+        </div>
+    </div>
+
+
+    <div class="w3-margin-top w3-mobile">
+        <img id="proimg" class="circle" src="./assets/noimage.png" alt="noimage" width="50" height="50" />
+        <div class="userDetails w3-container w3-third "></div>
+    </div>
+
+    <table id="table" style="display: none;" class="w3-table-all w3-third">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>speciality</th>
+                <th>ex</th>
+                <th>portfolio</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <div style="position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;">
+        <button class="w3-button"><a href="contactus.html">Contact Us</a></button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
+        });
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+    <script>
+        //Firebase configuration
+        var firebaseConfig = {
+                apiKey: "AIzaSyCwlFDgA69iP-jXD7leg2mr1okZ6NtKmJY",
+                authDomain: "xenonstack-technical-task.firebaseapp.com",
+                projectId: "xenonstack-technical-task",
+                storageBucket: "xenonstack-technical-task.appspot.com",
+                messagingSenderId: "61983355626",
+                appId: "1:61983355626:web:b47cae34bcb42587959d93"
+            };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./scripts/auth.js"></script>
+    <script src="./scripts/firestore-db.js"></script>
+</body>
+
+</html>

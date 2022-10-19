@@ -51,3 +51,15 @@ Step by Step Explanation of website:
 
 
 11. To check whether the data and the user are saved or not user can simply login again by the previous credentials.
+
+12. Database Screenshots: showing that the database is working properly.
+
+Here in the first image we can see the all the users that are created successfully from the signup page and are ready to login.
+![image](https://user-images.githubusercontent.com/91240645/196822780-e85b147d-3b45-46b7-a347-8f47b934d4e0.png)
+
+Here in the second image we can see that the user details are being successfully save on the database.
+![image](https://user-images.githubusercontent.com/91240645/196823164-7ceeeaaf-9a13-4d46-9116-69eb31a95a76.png)
+
+Here in the third image we can see that the contact us data are successfully saved in the database.
+![image](https://user-images.githubusercontent.com/91240645/196823312-e6d2c1d7-f4b4-4ec8-a50b-6221f9c7db35.png)
+

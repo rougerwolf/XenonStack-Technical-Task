@@ -2,6 +2,8 @@
 
 Technical Task given by the company in round 2...
 
+Link for live project demo:
+
 Languages used: HTML, CSS, JAVASCRIPT, JQUERY
 FOR DATABASE AND BACKEND : FIREBASE  is used.
 

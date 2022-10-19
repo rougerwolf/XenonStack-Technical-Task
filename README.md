@@ -2,7 +2,7 @@
 
 Technical Task given by the company in round 2...
 
-Link for live project demo:
+Link for live project demo: https://rougerwolf.github.io/XenonStack-Technical-Task/
 
 Languages used: HTML, CSS, JAVASCRIPT, JQUERY
 FOR DATABASE AND BACKEND : FIREBASE  is used.
